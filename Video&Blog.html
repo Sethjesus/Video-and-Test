@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Page</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  .videobox-container {
+    margin-bottom: 20px; /* Add some spacing between videos */
+  }
+  .videobox {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+  .videobox iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Content input for three columns -->
+  <div>
+    <input type="text" class="form-control mb-2" placeholder="Column 1 Content">
+    <input type="text" class="form-control mb-2" placeholder="Column 2 Content">
+    <input type="text" class="form-control mb-2" placeholder="Column 3 Content">
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="videobox-container">
+        <div class="videobox">
+          <iframe frameborder="0" src="https://www.youtube.com/embed/OAlT24M9muE?si=6WGhJIiTj8c79Z8r" title="UDM Wired 3 Phase power Cloud Managerment"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="videobox-container">
+        <div class="videobox">
+          <iframe frameborder="0" src="https://www.youtube.com/embed/RoOzE9lyJ1c?si=S5mJ3KfbZAcmF0nP" title="UDM Wired 3 Phase Panel Connection with RS485"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="videobox-container">
+        <div class="videobox">
+          <iframe frameborder="0" src="https://www.youtube.com/embed/t1wWHKrVr04?si=UqGXaVdMjg8nFD0X" title="UDM Wired 3 Phase Smart meter operation"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="videobox-container">
+        <div class="videobox">
+          <iframe frameborder="0" src="https://www.youtube.com/embed/R3s3l_Hr6tQ?si=6dif0PWx8Gx5abx6&start=7" title="UDM ESG Soluction"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="videobox-container">
+        <div class="videobox">
+          <iframe frameborder="0" src="https://www.youtube.com/embed/iyKjvl0YfDs?si=_1NA8zoYWF5XVTwA" title="UDM Smartphone Setting"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="videobox-container">
+        <div class="videobox">
+          <iframe frameborder="0" src="https://www.youtube.com/embed/QiCgT0_Revc?si=F-1oZQtdB557CCkp&start=61" title="UDM Wireless Solution Cloud Managerment"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
