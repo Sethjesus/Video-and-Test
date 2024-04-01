@@ -3,93 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Page</title>
+<title>Video Grid</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .videobox {
+        margin-bottom: 20px;
+    }
+    iframe {
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="row" id="videoGrid"></div>
+</div>
+
+<script>
+    const videos = [
+        {
+            title: "UDM Wired 3 Phase power Cloud Managerment<br>三相電源雲端管理系統",
+            src: "https://www.youtube.com/embed/OAlT24M9muE?si=6WGhJIiTj8c79Z8r"
+        },
+        {
+            title: "UDM Wired 3 Phase Panel Connection with RS485<br>三相電源連結RS485",
+            src: "https://www.youtube.com/embed/RoOzE9lyJ1c?si=S5mJ3KfbZAcmF0nP"
+        },
+        {
+            title: "UDM Wired 3 Phase Smart meter operation<br>三相智慧電表操作",
+            src: "https://www.youtube.com/embed/t1wWHKrVr04?si=UqGXaVdMjg8nFD0X"
+        },
+        {
+            title: "UDM ESG Soluction<br>UDM ESG解決方案",
+            src: "https://www.youtube.com/embed/R3s3l_Hr6tQ?si=6dif0PWx8Gx5abx6&start=7"
+        },
+        {
+            title: "UDM Smartphone Setting<br>UDM智能手機設定",
+            src: "https://www.youtube.com/embed/iyKjvl0YfDs?si=_1NA8zoYWF5XVTwA"
+        },
+        {
+            title: "UDM Wireless Solution Cloud Managerment<br>UDM 無限解決方案雲端管理",
+            src: "https://www.youtube.com/embed/QiCgT0_Revc?si=F-1oZQtdB557CCkp&start=61"
+        }
+    ];
+
+    const videoGrid = document.getElementById("videoGrid");
+
+    videos.forEach((video, index) => {
+        const colDiv = document.createElement("div");
+        colDiv.classList.add("col-md-6");
+        
+        const videoBox = document.createElement("div");
+        videoBox.classList.add("videobox");
+        
+        const iframe = document.createElement("iframe");
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute("src", video.src);
+        iframe.setAttribute("allowFullScreen", "true");
+        
+        videoBox.appendChild(iframe);
+        
+        const titleParagraph = document.createElement("p");
+        titleParagraph.innerHTML = `<span style="font-size:1.0em;"><b><font size="3">${video.title}</font></b></span>`;
+        videoBox.appendChild(titleParagraph);
+        
+        colDiv.appendChild(videoBox);
+        videoGrid.appendChild(colDiv);
+        
+        if ((index + 1) % 2 === 0) {
+            videoGrid.appendChild(document.createElement("br"));
+        }
+    });
+</script>
+
+</body>
+
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <style>
-  .videobox-container {
-    margin-bottom: 20px; /* Add some spacing between videos */
+  #blogLink img {
+    width: 66px;
+    height: 66px;
+    margin-right: 10px;
   }
-  .videobox {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-  }
-  .videobox iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  .centered {
+    text-align: center;
   }
 </style>
 </head>
 <body>
 
 <div class="container">
-  <!-- Content input for three columns -->
-  <div>
-    <input type="text" class="form-control mb-2" placeholder="Column 1 Content">
-    <input type="text" class="form-control mb-2" placeholder="Column 2 Content">
-    <input type="text" class="form-control mb-2" placeholder="Column 3 Content">
-  </div>
-
   <div class="row">
-    <div class="col-md-4">
-      <div class="videobox-container">
-        <div class="videobox">
-          <iframe frameborder="0" src="https://www.youtube.com/embed/OAlT24M9muE?si=6WGhJIiTj8c79Z8r" title="UDM Wired 3 Phase power Cloud Managerment"></iframe>
-        </div>
+    <div class="col-md-6 centered">
+      <span>Blog & PIXNET</span>
+      <div class="centered"><Marquee Width="300" Height="40">
+        <font size="6"><font color="orange"><font face="Tahoma"><b>PIXNET & BLOG </b> </font></font></font></marquee>
       </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="videobox-container">
-        <div class="videobox">
-          <iframe frameborder="0" src="https://www.youtube.com/embed/RoOzE9lyJ1c?si=S5mJ3KfbZAcmF0nP" title="UDM Wired 3 Phase Panel Connection with RS485"></iframe>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="videobox-container">
-        <div class="videobox">
-          <iframe frameborder="0" src="https://www.youtube.com/embed/t1wWHKrVr04?si=UqGXaVdMjg8nFD0X" title="UDM Wired 3 Phase Smart meter operation"></iframe>
-        </div>
-      </div>
+      <br>
+      <a href="https://udmjpesg520.pixnet.net/blog/post/134630971?utm_source=PIXNET&utm_medium=pcard_article&utm_content=4619365b7225bbd1b0"><font color="Blue" size="5">>PIXNET</font></a>
     </div>
   </div>
-
+  <br>
   <div class="row">
-    <div class="col-md-4">
-      <div class="videobox-container">
-        <div class="videobox">
-          <iframe frameborder="0" src="https://www.youtube.com/embed/R3s3l_Hr6tQ?si=6dif0PWx8Gx5abx6&start=7" title="UDM ESG Soluction"></iframe>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="videobox-container">
-        <div class="videobox">
-          <iframe frameborder="0" src="https://www.youtube.com/embed/iyKjvl0YfDs?si=_1NA8zoYWF5XVTwA" title="UDM Smartphone Setting"></iframe>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="videobox-container">
-        <div class="videobox">
-          <iframe frameborder="0" src="https://www.youtube.com/embed/QiCgT0_Revc?si=F-1oZQtdB557CCkp&start=61" title="UDM Wireless Solution Cloud Managerment"></iframe>
-        </div>
+    <div class="col-md-12 centered">
+      <div id="blogLink">
+        <a href="https://jackyimba.blogspot.com/"><img src="https://onedrive.live.com/embed?resid=8EF63FDD92F9370F%213571&authkey=%21AOirEeL9tE2PYe4&width=66&height=66" alt="My Blog"></a>
+        <a href="https://jackyimba.blogspot.com/">前往我的部落格</a>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Bootstrap JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+
 </html>
